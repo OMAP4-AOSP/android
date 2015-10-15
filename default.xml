@@ -2,7 +2,12 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="https://android.googlesource.com/"
+           review="https://android-review.googlesource.com/" />
+
+  <remote  name="omap4-aosp"
+           fetch="https://github.com/OMAP4-AOSP/" />
+
   <default revision="refs/tags/android-6.0.0_r1"
            remote="aosp"
            sync-j="4" />
