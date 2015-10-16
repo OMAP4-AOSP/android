@@ -55,6 +55,8 @@
   <project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu,broadcom_pdk" />
   <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu,broadcom_pdk" clone-depth="1" />
   <project path="device/sample" name="device/sample" groups="pdk" />
+  <project path="device/samsung/maguro" name="android_device_samsung_maguro" groups="device,tuna" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/samsung/tuna" name="android_device_samsung_tuna" groups="device,tuna" remote="omap4-aosp" revision="aosp-6.0" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" groups="pdk-cw-fs,pdk-fs" />
@@ -342,7 +344,9 @@
   <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" groups="omap3" />
   <project path="hardware/ti/omap4-aah" name="platform/hardware/ti/omap4-aah" groups="omap4-aah" />
-  <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" />
+  <project path="hardware/ti/omap4xxx" name="android_hardware_ti_omap4xxx" remote="omap4-aosp" revision="aosp-6.0" groups="omap4" />
+  <project path="hardware/ti/omap4" name="android_hardware_ti_omap4" remote="omap4-aosp" revision="aosp-6.0" groups="omap4" />
+  <project path="kernel/samsung/tuna" name="android_kernel_samsung_tuna" groups="device,tuna" remote="omap4-aosp" revision="aosp-6.0" />
   <project path="libcore" name="platform/libcore" groups="pdk" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" />
   <project path="ndk" name="platform/ndk" groups="generic_fs" />
@@ -480,5 +484,6 @@
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="omap4-aosp" revision="aosp-6.0" />
 
 </manifest>
