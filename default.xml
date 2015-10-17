@@ -55,6 +55,11 @@
   <project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu,broadcom_pdk" />
   <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu,broadcom_pdk" clone-depth="1" />
   <project path="device/sample" name="device/sample" groups="pdk" />
+  <project path="device/samsung/espresso-common" name="android_device_samsung_espresso-common" groups="device,espresso" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/samsung/p3100" name="android_device_samsung_p3100" groups="device,espresso" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/samsung/p3110" name="android_device_samsung_p3110" groups="device,espresso" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/samsung/p5100" name="android_device_samsung_p5100" groups="device,espresso" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/samsung/p5110" name="android_device_samsung_p5110" groups="device,espresso" remote="omap4-aosp" revision="aosp-6.0" />
   <project path="device/samsung/maguro" name="android_device_samsung_maguro" groups="device,tuna" remote="omap4-aosp" revision="aosp-6.0" />
   <project path="device/samsung/tuna" name="android_device_samsung_tuna" groups="device,tuna" remote="omap4-aosp" revision="aosp-6.0" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
@@ -346,6 +351,7 @@
   <project path="hardware/ti/omap4-aah" name="platform/hardware/ti/omap4-aah" groups="omap4-aah" />
   <project path="hardware/ti/omap4xxx" name="android_hardware_ti_omap4xxx" remote="omap4-aosp" revision="aosp-6.0" groups="omap4" />
   <project path="hardware/ti/omap4" name="android_hardware_ti_omap4" remote="omap4-aosp" revision="aosp-6.0" groups="omap4" />
+  <project path="kernel/samsung/espresso" name="android_kernel_samsung_espresso" groups="device,espresso" remote="omap4-aosp" revision="aosp-6.0" />
   <project path="kernel/samsung/tuna" name="android_kernel_samsung_tuna" groups="device,tuna" remote="omap4-aosp" revision="aosp-6.0" />
   <project path="libcore" name="platform/libcore" groups="pdk" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" />
