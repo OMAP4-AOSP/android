@@ -8,7 +8,7 @@
   <remote  name="omap4-aosp"
            fetch="https://github.com/OMAP4-AOSP/" />
 
-  <default revision="refs/tags/android-6.0.0_r1"
+  <default revision="refs/tags/android-6.0.0_r26"
            remote="aosp"
            sync-j="4" />
 
