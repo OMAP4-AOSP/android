@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Include AOSP -->
+  <include name="aosp.xml" />
+
+  <!-- Define remotes -->
+  <remote  name="omap4-aosp"
+           fetch="https://github.com/OMAP4-AOSP/" />
+
+  <!-- Replace build project to build kernel inline from the source -->
+  <remove-project name="platform/build" />
+  <project path="build" name="android_build" remote="omap4-aosp" revision="aosp-6.0" groups="pdk" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <remove-project name="platform/frameworks/av" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="omap4-aosp" revision="aosp-6.0" groups="pdk" />
+  <remove-project name="platform/frameworks/base" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="omap4-aosp" revision="aosp-6.0" groups="pdk-cw-fs,pdk-fs" /> 
+  <remove-project name="platform/frameworks/native" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="omap4-aosp" revision="aosp-6.0" groups="pdk" /> 
+  <remove-project name="platform/frameworks/opt/telephony" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="omap4-aosp" revision="aosp-6.0" groups="pdk" /> 
+  <remove-project name="platform/hardware/ril" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="omap4-aosp" revision="aosp-6.0" groups="pdk" />
+  <remove-project name="platform/packages/apps/Camera2" />
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="omap4-aosp" revision="aosp-6.0" groups="pdk-fs" />
+
+  <!-- Debloat -->
+  <remove-project name="device/asus/deb" />
+  <remove-project name="device/asus/flo" />
+  <remove-project name="device/asus/flo-kernel" />
+  <remove-project name="device/asus/fugu" />
+  <remove-project name="device/asus/fugu-kernel" />
+  <remove-project name="device/lge/bullhead" />
+  <remove-project name="device/lge/bullhead-kernel" />
+  <remove-project name="device/htc/flounder" />
+  <remove-project name="device/htc/flounder-kernel" />
+  <remove-project name="device/huawei/angler" />
+  <remove-project name="device/huawei/angler-kernel" />
+  <remove-project name="device/lge/hammerhead" />
+  <remove-project name="device/lge/hammerhead-kernel" />
+  <remove-project name="device/moto/shamu" />
+  <remove-project name="device/moto/shamu-kernel" />
+  <remove-project name="platform/hardware/intel/audio_media" />
+  <remove-project name="platform/hardware/intel/bootstub" />
+  <remove-project name="platform/hardware/intel/common/bd_prov" />
+  <remove-project name="platform/hardware/intel/common/libmix" />
+  <remove-project name="platform/hardware/intel/common/libstagefrighthw" />
+  <remove-project name="platform/hardware/intel/common/libva" />
+  <remove-project name="platform/hardware/intel/common/libwsbm" />
+  <remove-project name="platform/hardware/intel/common/omx-components" />
+  <remove-project name="platform/hardware/intel/common/utils" />
+  <remove-project name="platform/hardware/intel/common/wrs_omxil_core" />
+  <remove-project name="platform/hardware/intel/img/hwcomposer" />
+  <remove-project name="platform/hardware/intel/img/psb_headers" />
+  <remove-project name="platform/hardware/intel/img/psb_video" />
+  <remove-project name="platform/hardware/intel/sensors" />
+  <remove-project name="platform/hardware/marvell/bt" />
+  <remove-project name="platform/hardware/mediatek" />
+  <remove-project name="platform/hardware/nvidia/audio" />
+  <remove-project name="platform/hardware/qcom/audio" />
+  <remove-project name="platform/hardware/qcom/bt" />
+  <remove-project name="platform/hardware/qcom/camera" />
+  <remove-project name="platform/hardware/qcom/display" />
+  <remove-project name="platform/hardware/qcom/gps" />
+  <remove-project name="platform/hardware/qcom/keymaster" />
+  <remove-project name="platform/hardware/qcom/media" />
+  <remove-project name="platform/hardware/qcom/msm8960" />
+  <remove-project name="platform/hardware/qcom/msm8994" />
+  <remove-project name="platform/hardware/qcom/msm8x26" />
+  <remove-project name="platform/hardware/qcom/msm8x27" />
+  <remove-project name="platform/hardware/qcom/msm8x74" />
+  <remove-project name="platform/hardware/qcom/msm8x84" />
+  <remove-project name="platform/hardware/qcom/power" />
+  <remove-project name="platform/hardware/qcom/sensors" />
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <remove-project name="platform/hardware/ti/omap3" />
+  <remove-project name="platform/hardware/ti/omap4-aah" />
+  <remove-project name="platform/hardware/ti/omap4xxx" />
+
+  <!-- Device, kernel, vendor and hardware repos -->
+  <project path="device/bn/common" name="android_device_bn_common" groups="device,nookhd" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/bn/ovation" name="android_device_bn_ovation" groups="device,nookhd" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/bn/hummingbird" name="android_device_bn_hummingbird" groups="device,nookhd" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/samsung/espresso" name="android_device_samsung_espresso" groups="device,espresso" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/samsung/espresso3g" name="android_device_samsung_espresso3g" groups="device,espresso" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="device/samsung/tuna" name="android_device_samsung_tuna" groups="device,tuna" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="hardware/ti/omap4" name="android_hardware_ti_omap4" remote="omap4-aosp" revision="stable" groups="omap4" />
+  <project path="kernel/bn/omap" name="android_kernel_bn_omap" groups="device,nookhd" remote="omap4-aosp" revision="stable" />
+  <project path="kernel/samsung/espresso" name="android_kernel_samsung_espresso" groups="device,espresso" remote="omap4-aosp" revision="stable" />
+  <project path="kernel/samsung/tuna" name="android_kernel_samsung_tuna" groups="device,tuna" remote="omap4-aosp" revision="stable" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" revision="master" groups="pdk,linux,arm" />
+  <project path="vendor/bn" name="proprietary_vendor_bn" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="vendor/ti" name="proprietary_vendor_ti" remote="omap4-aosp" revision="aosp-6.0" />
+  <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="omap4-aosp" revision="aosp-6.0" />
+
+</manifest>
