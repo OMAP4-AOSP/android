@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Include AOSP -->
+  <include name="aosp.xml" />
+
+  <remote  name="omap4-aosp"
+           fetch="https://github.com/OMAP4-AOSP/" />
+
+  <remote  name="android-security"
+           fetch="https://github.com/android-security/" />
+
+
+  <!-- repos with OMAP4 specific additions -->
+  <remove-project name="platform/build" />
+  <project path="build" name="android_build" remote="omap4-aosp" revision="aosp-4.4" groups="pdk" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <remove-project name="platform/frameworks/av" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="omap4-aosp" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/frameworks/base" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="omap4-aosp" revision="aosp-4.4" />
+  <remove-project name="platform/frameworks/native" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="omap4-aosp" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/frameworks/opt/telephony" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="omap4-aosp" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/hardware/ril" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="omap4-aosp" revision="aosp-4.4" groups="pdk" />
+
+  <!-- Debloat -->
+  <remove-project name="device/asus/deb" />
+  <remove-project name="device/asus/flo" />
+  <remove-project name="device/asus/flo-kernel" />
+  <remove-project name="device/asus/grouper" />
+  <remove-project name="device/asus/tilapia" />
+  <remove-project name="device/lge/hammerhead" />
+  <remove-project name="device/lge/hammerhead-kernel" />
+  <remove-project name="device/lge/mako" />
+  <remove-project name="device/lge/mako-kernel" />
+  <remove-project name="device/samsung/manta" />
+  <remove-project name="platform/hardware/qcom/audio" />
+  <remove-project name="platform/hardware/qcom/bt" />
+  <remove-project name="platform/hardware/qcom/camera" />
+  <remove-project name="platform/hardware/qcom/display" />
+  <remove-project name="platform/hardware/qcom/keymaster" />
+  <remove-project name="platform/hardware/qcom/media" />
+  <remove-project name="platform/hardware/qcom/msm8960" />>
+  <remove-project name="platform/hardware/qcom/msm8x74" />
+  <remove-project name="platform/hardware/qcom/power" />
+  <remove-project name="platform/hardware/qcom/sensors" />
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <remove-project name="platform/hardware/ti/omap3" />
+  <remove-project name="platform/hardware/ti/omap4xxx" />
+  <remove-project name="platform/hardware/samsung_slsi/exynos5" />
+
+  <!-- Device, kernel, vendor and hardware repos -->
+  <project path="device/samsung/espresso" name="android_device_samsung_espresso" groups="device,espresso" remote="omap4-aosp" revision="aosp-4.4" />
+  <project path="device/samsung/espresso3g" name="android_device_samsung_espresso3g" groups="device,espresso" remote="omap4-aosp" revision="aosp-4.4" />
+  <project path="device/samsung/tuna" name="android_device_samsung_tuna" groups="device,tuna" remote="omap4-aosp" revision="aosp-4.4" />
+  <project path="hardware/ti/omap4" name="android_hardware_ti_omap4" remote="omap4-aosp" revision="aosp-4.4" groups="omap4" />
+  <project path="kernel/samsung/espresso" name="android_kernel_samsung_espresso" groups="device,espresso" remote="omap4-aosp" revision="stable" />
+  <project path="kernel/samsung/tuna" name="android_kernel_samsung_tuna" groups="device,tuna" remote="omap4-aosp" revision="stable" />
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="omap4-aosp" revision="aosp-4.4" />
+  <project path="vendor/ti" name="proprietary_vendor_ti" remote="omap4-aosp" revision="aosp-4.4" />
+
+  <!-- patched AOSP repos from android-security remote because no OMAP4 specific changes needed -->
+  <remove-project name="platform/art" />
+  <project path="art" name="android_art" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/bootable/recovery" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/dalvik" />
+  <project path="dalvik" name="android_dalvik" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/external/aac" />
+  <project path="external/aac" name="android_external_aac" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/external/bluetooth/bluedroid" />
+  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/external/bouncycastle" />
+  <project path="external/bouncycastle" name="android_external_bouncycastle" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/external/chromium_org" />
+  <project path="external/chromium_org" name="android_external_chromium_org" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/external/chromium_org/third_party/openssl" />
+  <project path="external/chromium_org/third_party/openssl" name="android_external_chromium_org_third_party_openssl" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/external/dhcpcd" />
+  <project path="external/dhcpcd" name="android_external_dhcpcd" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/external/flac" />
+  <project path="external/flac" name="android_external_flac" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/external/libvpx" />
+  <project path="external/libvpx" name="android_external_libvpx" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/external/okhttp" />
+  <project path="external/okhttp" name="android_external_okhttp" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/external/openssl" />
+  <project path="external/openssl" name="android_external_openssl" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/external/skia" />
+  <project path="external/skia" name="android_external_skia" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/external/sonivox" />
+  <project path="external/sonivox" name="android_external_sonivox" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/external/sqlite" />
+  <project path="external/sqlite" name="android_external_sqlite" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/external/tremolo" />
+  <project path="external/tremolo" name="android_external_tremolo" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/external/wpa_supplicant_8" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/libcore" />
+  <project path="libcore" name="android_libcore" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/packages/apps/Bluetooth" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/packages/apps/CertInstaller" />
+  <project path="packages/apps/CertInstaller" name="android_packages_apps_CertInstaller" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/packages/apps/Mms" />
+  <project path="packages/apps/Mms" name="android_packages_apps_Mms" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/packages/apps/Settings" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/packages/apps/UnifiedEmail" />
+  <project path="packages/apps/UnifiedEmail" name="android_packages_apps_UnifiedEmail" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/packages/services/Telephony" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/system/core" />
+  <project path="system/core" name="android_system_core" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/system/security" />
+  <project path="system/security" name="android_system_security" remote="android-security" revision="aosp-4.4" groups="pdk" />
+</manifest>
