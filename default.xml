@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Include AOSP -->
+  <include name="aosp.xml" />
+
+  <!-- Define remotes -->
+  <remote  name="omap4-aosp"
+           fetch="https://github.com/OMAP4-AOSP/" />
+
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" revision="master" groups="pdk,linux,arm" />
+
+</manifest>
