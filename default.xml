@@ -39,7 +39,7 @@
   <project path="device/samsung/espresso" name="android_device_samsung_espresso" remote="omap4-aosp" groups="device,samsung,espresso" />
   <project path="device/samsung/espresso3g" name="android_device_samsung_espresso3g" remote="omap4-aosp" groups="device,samsung,espresso" />
   <project path="device/samsung/tuna" name="android_device_samsung_tuna" remote="omap4-aosp" groups="device,samsung,tuna" />
-  <project path="hardware/ti/omap4" name="android_hardware_ti_omap4" remote="omap4-aosp" groups="omap4" />
+  <project path="hardware/ti/omap4" name="android_hardware_ti_omap4" remote="omap4-aosp" revision="stable" groups="omap4" />
   <project path="kernel/bn/omap" name="android_kernel_bn_omap" remote="omap4-aosp" groups="kernel,bn,nookhd" />
   <project path="kernel/samsung/espresso" name="android_kernel_samsung_espresso" remote="omap4-aosp" groups="kernel,samsung,espresso" />
   <project path="kernel/samsung/tuna" name="android_kernel_samsung_tuna" remote="omap4-aosp" groups="kernel,samsung,tuna" />
