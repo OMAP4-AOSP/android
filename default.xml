@@ -25,6 +25,10 @@
   <remove-project name="platform/packages/apps/Camera2" />
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="omap4-aosp" revision="aosp-6.0" groups="pdk-fs" />
 
+  <!-- Workaround -->
+  <remove-project name="platform/packages/apps/Exchange" />
+  <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" revision="refs/tags/android-6.0.1_r61" groups="pdk-fs" />
+
   <!-- Debloat -->
   <remove-project name="device/asus/deb" />
   <remove-project name="device/asus/flo" />
