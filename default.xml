@@ -20,8 +20,6 @@
   <project path="frameworks/base" name="android_frameworks_base" remote="omap4-aosp" revision="aosp-6.0" groups="pdk-cw-fs,pdk-fs" /> 
   <remove-project name="platform/frameworks/native" />
   <project path="frameworks/native" name="android_frameworks_native" remote="omap4-aosp" revision="aosp-6.0" groups="pdk" /> 
-  <remove-project name="platform/hardware/ril" />
-  <project path="hardware/ril" name="android_hardware_ril" remote="omap4-aosp" revision="aosp-6.0" groups="pdk" />
   <remove-project name="platform/packages/apps/Camera2" />
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="omap4-aosp" revision="aosp-6.0" groups="pdk-fs" />
 
