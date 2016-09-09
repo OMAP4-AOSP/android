@@ -16,8 +16,6 @@
 
   <remove-project name="platform/frameworks/av" />
   <project path="frameworks/av" name="android_frameworks_av" remote="omap4-aosp" revision="aosp-6.0" groups="pdk" />
-  <remove-project name="platform/frameworks/base" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="omap4-aosp" revision="aosp-6.0" groups="pdk-cw-fs,pdk-fs" /> 
   <remove-project name="platform/frameworks/native" />
   <project path="frameworks/native" name="android_frameworks_native" remote="omap4-aosp" revision="aosp-6.0" groups="pdk" /> 
   <remove-project name="platform/packages/apps/Camera2" />
