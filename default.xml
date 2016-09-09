@@ -16,8 +16,6 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <remove-project name="platform/frameworks/base" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="omap4-aosp" revision="aosp-4.4" />
   <remove-project name="platform/frameworks/native" />
   <project path="frameworks/native" name="android_frameworks_native" remote="omap4-aosp" revision="aosp-4.4" groups="pdk" />
 
@@ -100,6 +98,8 @@
   <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="android-security" revision="aosp-4.4" groups="pdk" />
   <remove-project name="platform/frameworks/av" />
   <project path="frameworks/av" name="android_frameworks_av" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <remove-project name="platform/frameworks/base" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="android-security" revision="aosp-4.4" />
   <remove-project name="platform/libcore" />
   <project path="libcore" name="android_libcore" remote="android-security" revision="aosp-4.4" />
   <remove-project name="platform/packages/apps/Bluetooth" />
