@@ -14,8 +14,6 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <remove-project name="platform/bootable/recovery" />
-  <project path="bootable/recovery" name="android_bootable_recovery" remote="omap4-aosp" revision="aosp-5.1" groups="pdk" />
   <remove-project name="platform/frameworks/av" />
   <project path="frameworks/av" name="android_frameworks_av" remote="omap4-aosp" revision="aosp-5.1" groups="pdk" />
   <remove-project name="platform/frameworks/native" />
